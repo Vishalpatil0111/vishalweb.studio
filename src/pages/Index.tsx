@@ -47,6 +47,7 @@ const Index = () => {
           <a href="#work" className="hover:text-lime transition-colors">Work</a>
           <a href="#services" className="hover:text-lime transition-colors">Services</a>
           <a href="#about" className="hover:text-lime transition-colors">About</a>
+          <a href="#cv" className="hover:text-lime transition-colors">CV</a>
           <a href="#contact" className="hover:text-lime transition-colors">Contact</a>
         </div>
         <div className="text-xs uppercase tracking-[0.2em] hidden sm:block">{time}</div>

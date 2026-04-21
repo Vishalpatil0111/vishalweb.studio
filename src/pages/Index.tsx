@@ -1,13 +1,8 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight, Sparkles, Download, FileText } from "lucide-react";
 import { useEffect, useState } from "react";
-
-const projects = [
-  { id: "01", title: "Lunar Commerce", category: "Brand × Web", year: "2025", color: "bg-lime" },
-  { id: "02", title: "Atlas Studio", category: "Identity System", year: "2024", color: "bg-ink" },
-  { id: "03", title: "Noir & Co.", category: "E-commerce", year: "2024", color: "bg-paper border border-ink" },
-  { id: "04", title: "Field Notes", category: "Editorial / UX", year: "2023", color: "bg-ink" },
-];
+import ProjectModal from "@/components/ProjectModal";
+import { projects, type Project } from "@/data/projects";
 
 const services = [
   { n: "01", t: "Brand Identity", d: "Logos, systems, voice — built to last a decade, not a quarter." },
@@ -18,6 +13,7 @@ const services = [
 
 const Index = () => {
   const [time, setTime] = useState("");
+  const [active, setActive] = useState<Project | null>(null);
 
   useEffect(() => {
     const update = () => {
@@ -151,14 +147,15 @@ const Index = () => {
 
         <div className="grid grid-cols-12 gap-6 md:gap-8">
           {projects.map((p, i) => (
-            <motion.a
+            <motion.button
               key={p.id}
-              href="#"
+              type="button"
+              onClick={() => setActive(p)}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: i * 0.05 }}
-              className={`group col-span-12 ${
+              className={`group text-left col-span-12 ${
                 i % 3 === 0 ? "md:col-span-7" : i % 3 === 1 ? "md:col-span-5" : "md:col-span-6"
               }`}
             >
@@ -173,8 +170,8 @@ const Index = () => {
                       {p.id}
                     </span>
                   </div>
-                  <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-paper text-ink flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <ArrowUpRight size={16} />
+                  <div className="absolute top-4 right-4 inline-flex items-center gap-2 bg-paper text-ink px-3 py-2 text-[10px] uppercase tracking-[0.2em] opacity-0 group-hover:opacity-100 transition-opacity">
+                    View case <ArrowUpRight size={12} />
                   </div>
                 </div>
                 <div className="flex items-baseline justify-between border-b border-ink pb-3">
@@ -189,7 +186,7 @@ const Index = () => {
                   <span className="text-xs tabular-nums">{p.year}</span>
                 </div>
               </div>
-            </motion.a>
+            </motion.button>
           ))}
         </div>
       </section>
@@ -436,6 +433,8 @@ const Index = () => {
         </div>
         <div>Built by hand, not by template.</div>
       </footer>
+
+      <ProjectModal project={active} onClose={() => setActive(null)} />
     </div>
   );
 };

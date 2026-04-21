@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowUpRight, Sparkles, Download, FileText } from "lucide-react";
 import { useEffect, useState } from "react";
 import ProjectModal from "@/components/ProjectModal";
+import ContactForm from "@/components/ContactForm";
 import { projects, type Project } from "@/data/projects";
 
 const services = [
@@ -393,6 +394,14 @@ const Index = () => {
               <span className="italic font-light">worth</span> making?
             </h2>
 
+            {/* Form */}
+            <div className="mb-16 border-t border-b border-paper/20 py-10">
+              <ContactForm />
+            </div>
+
+            <div className="text-[10px] uppercase tracking-[0.3em] text-paper/50 mb-3">
+              ( Or, the old-fashioned way )
+            </div>
             <a
               href="mailto:hello@maravale.studio"
               className="inline-block group"

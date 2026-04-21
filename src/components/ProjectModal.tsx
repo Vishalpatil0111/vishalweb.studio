@@ -177,6 +177,43 @@ const ProjectModal = ({ project, onClose }: Props) => {
               </div>
             </div>
 
+            {/* CTA */}
+            <div className="border-t border-ink px-6 md:px-10 py-10 md:py-14 bg-paper">
+              <div className="grid grid-cols-12 gap-6 items-center">
+                <div className="col-span-12 md:col-span-7">
+                  <div className="text-[10px] uppercase tracking-[0.3em] text-ink/50 mb-3">
+                    ( Like what you see? )
+                  </div>
+                  <h3 className="font-display text-3xl md:text-5xl font-black tracking-tighter leading-[0.95]">
+                    Let's build the <span className="italic font-light">next</span> one
+                    <span className="text-lime">.</span>
+                  </h3>
+                </div>
+                <div className="col-span-12 md:col-span-5 md:text-right">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      onClose();
+                      // wait for modal exit + scroll lock release
+                      setTimeout(() => {
+                        document
+                          .getElementById("contact")
+                          ?.scrollIntoView({ behavior: "smooth", block: "start" });
+                      }, 320);
+                    }}
+                    className="group inline-flex items-center gap-4 bg-ink text-paper pl-6 pr-3 py-3 hover:bg-lime hover:text-ink transition-colors"
+                  >
+                    <span className="font-display text-xl md:text-2xl font-black tracking-tight">
+                      Discuss a project
+                    </span>
+                    <span className="w-10 h-10 rounded-full bg-paper text-ink flex items-center justify-center group-hover:bg-ink group-hover:text-paper transition-colors">
+                      <ArrowUpRight size={16} />
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
             {/* Footer */}
             <footer className="border-t border-ink bg-ink text-paper px-6 md:px-10 py-6 flex flex-col sm:flex-row justify-between gap-3 text-[10px] uppercase tracking-[0.25em]">
               <span>Case {project.id} — {project.title}</span>

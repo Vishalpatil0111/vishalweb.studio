@@ -433,6 +433,8 @@ const Index = () => {
         </div>
         <div>Built by hand, not by template.</div>
       </footer>
+
+      <ProjectModal project={active} onClose={() => setActive(null)} />
     </div>
   );
 };

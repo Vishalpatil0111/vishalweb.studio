@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, Sparkles } from "lucide-react";
+import { ArrowUpRight, Sparkles, Download, FileText } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const projects = [
@@ -242,6 +242,137 @@ const Index = () => {
               <span className="text-ink/40"> I work with a tight roster of clients
               each year — by choice, not shortage.</span>
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* CV / RESUME */}
+      <section id="cv" className="bg-paper text-ink px-6 md:px-10 py-24 md:py-32 border-t border-ink">
+        <div className="grid grid-cols-12 gap-4 mb-16">
+          <div className="col-span-12 md:col-span-3 text-[10px] uppercase tracking-[0.3em] text-ink/60">
+            ( Curriculum Vitae — 05 )
+          </div>
+          <h2 className="col-span-12 md:col-span-9 font-display text-5xl md:text-7xl font-black tracking-tighter leading-none">
+            Take the long version <span className="italic font-light">to go.</span>
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-12 gap-6 md:gap-10 items-start">
+          {/* Preview card */}
+          <div className="col-span-12 md:col-span-7">
+            <div className="hover-lift relative bg-paper border border-ink shadow-[8px_8px_0_0_hsl(var(--ink))] aspect-[1/1.414] overflow-hidden">
+              {/* mock CV header bar */}
+              <div className="absolute top-0 left-0 right-0 bg-ink text-paper px-4 py-2 flex justify-between text-[8px] uppercase tracking-[0.25em]">
+                <span>Mara Vale / CV / 2025</span>
+                <span className="hidden sm:inline">Index 001 — Independent Studio</span>
+              </div>
+
+              <div className="p-6 sm:p-10 pt-12 h-full flex flex-col">
+                <div className="flex items-start">
+                  <h3 className="font-display font-black tracking-tighter leading-none text-[clamp(2.5rem,7vw,5.5rem)]">
+                    Mara Vale<span className="text-ink">.</span>
+                  </h3>
+                  <span className="inline-block w-3 h-3 sm:w-4 sm:h-4 bg-lime mt-3 ml-1" />
+                </div>
+                <p className="font-display italic text-xl sm:text-2xl mt-2">
+                  Independent designer & art director.
+                </p>
+
+                <div className="grid grid-cols-3 gap-4 mt-4 text-[9px] uppercase tracking-[0.2em] text-ink/60">
+                  <span>Lisbon → Anywhere</span>
+                  <span>hello@maravale.studio</span>
+                  <span>maravale.studio</span>
+                </div>
+
+                <div className="border-t border-ink mt-4 pt-5 grid grid-cols-12 gap-4 flex-1 text-xs">
+                  <div className="col-span-4 text-[9px] uppercase tracking-[0.25em] text-ink/60 space-y-4">
+                    <div>( Profile )</div>
+                    <div>( Experience )</div>
+                    <div>( Capabilities )</div>
+                    <div>( Recognition )</div>
+                  </div>
+                  <div className="col-span-8 space-y-4">
+                    <div>
+                      <div className="font-display font-black text-base">About</div>
+                      <p className="text-[10px] leading-relaxed text-ink/80 mt-1">
+                        Eight years independent. I treat every brief like a manuscript: read carefully, edit ruthlessly, then set it in type that breathes.
+                      </p>
+                    </div>
+                    <div>
+                      <div className="font-display font-black text-base">Selected Work</div>
+                      <ul className="text-[10px] mt-1 space-y-1">
+                        <li className="flex justify-between border-b border-ink/20 pb-1">
+                          <span className="font-display font-black">Lunar Commerce</span><span className="font-mono text-ink/60">2025</span>
+                        </li>
+                        <li className="flex justify-between border-b border-ink/20 pb-1">
+                          <span className="font-display font-black">Atlas Studio</span><span className="font-mono text-ink/60">2024</span>
+                        </li>
+                        <li className="flex justify-between border-b border-ink/20 pb-1">
+                          <span className="font-display font-black">Noir & Co.</span><span className="font-mono text-ink/60">2024</span>
+                        </li>
+                        <li className="flex justify-between">
+                          <span className="font-display font-black">Field Notes Magazine</span><span className="font-mono text-ink/60">2023</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="flex flex-wrap gap-x-3 gap-y-1 text-[10px]">
+                      {["Brand Identity","Web Design","Art Direction","Type","Editorial","Strategy"].map(s => (
+                        <span key={s} className="flex items-center gap-1"><span className="w-1.5 h-1.5 bg-lime inline-block" />{s}</span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="absolute bottom-0 left-0 right-0 bg-ink text-paper px-4 py-2 flex justify-between text-[8px] uppercase tracking-[0.25em]">
+                <span>© 2025 Mara Vale</span>
+                <span className="flex items-center gap-2">Available Q3 / 2025 <span className="w-1.5 h-1.5 bg-lime rounded-full inline-block" /></span>
+              </div>
+            </div>
+          </div>
+
+          {/* Side info + download */}
+          <div className="col-span-12 md:col-span-5 md:pl-4 space-y-8">
+            <div className="text-sm leading-relaxed">
+              One page. Every project, every award, every detail — set in the same
+              type system as this site. Print it, share it, archive it.
+            </div>
+
+            <div className="space-y-px bg-ink">
+              {[
+                ["Format", "PDF — A4"],
+                ["Pages", "01"],
+                ["File size", "~80 KB"],
+                ["Updated", "Apr 2025"],
+              ].map(([k, v]) => (
+                <div key={k} className="flex justify-between bg-paper px-4 py-3 text-xs uppercase tracking-[0.2em]">
+                  <span className="text-ink/60">{k}</span>
+                  <span className="font-display font-black tracking-tight normal-case text-base">{v}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-3">
+              <a
+                href="/mara-vale-cv.pdf"
+                download="Mara-Vale-CV.pdf"
+                className="group flex-1 inline-flex items-center justify-between gap-4 bg-ink text-paper px-6 py-5 hover:bg-lime hover:text-ink transition-colors"
+              >
+                <span className="flex items-center gap-3">
+                  <Download size={18} />
+                  <span className="font-display font-black text-xl">Download CV</span>
+                </span>
+                <span className="text-[10px] uppercase tracking-[0.25em]">.pdf</span>
+              </a>
+              <a
+                href="/mara-vale-cv.pdf"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center gap-2 border border-ink px-6 py-5 hover:bg-ink hover:text-paper transition-colors text-xs uppercase tracking-[0.25em]"
+              >
+                <FileText size={16} /> Preview
+              </a>
+            </div>
           </div>
         </div>
       </section>

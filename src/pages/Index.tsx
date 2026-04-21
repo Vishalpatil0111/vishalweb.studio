@@ -419,7 +419,7 @@ const Index = () => {
               </div>
               <div>
                 <div className="text-paper/50 mb-2">Read</div>
-                <a href="#" className="hover:text-lime">CV / PDF</a>
+                <a href="/mara-vale-cv.pdf" download className="hover:text-lime">CV / PDF</a>
               </div>
             </div>
           </div>

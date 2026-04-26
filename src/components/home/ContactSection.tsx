@@ -8,7 +8,7 @@ export function ContactSection() {
           className="ticker font-display font-black text-paper/5 whitespace-nowrap"
           style={{ fontSize: "clamp(8rem, 25vw, 28rem)" }}
         >
-          let's build - let's build -
+          let&apos;s build - let&apos;s build -
         </div>
       </div>
 

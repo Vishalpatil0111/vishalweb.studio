@@ -9,7 +9,7 @@ export function AboutSection() {
         </div>
         <div className="col-span-12 md:col-span-9 space-y-10">
           <p className="font-display text-3xl md:text-5xl font-light leading-[1.15] tracking-tight">
-            Hi, I'm <span className="font-black">Vishal Patil</span> - a web developer focused on building{" "}
+            Hi, I&apos;m <span className="font-black">Vishal Patil</span> - a web developer focused on building{" "}
             <span className="italic">modern, scalable, and performance-driven</span> websites.
             <span className="text-ink/40">
               {" "}
@@ -21,8 +21,8 @@ export function AboutSection() {
           <div className="grid grid-cols-12 gap-6 md:gap-10 pt-4 border-t border-ink">
             <div className="col-span-12 md:col-span-5">
               <p className="text-sm leading-relaxed text-ink/70 max-w-md">
-                Over the past few years, I've worked on multiple projects where I've transformed ideas into fully
-                functional, user-friendly digital products. I don't just build websites - I build solutions designed to
+                Over the past few years, I&apos;ve worked on multiple projects where I&apos;ve transformed ideas into fully
+                functional, user-friendly digital products. I don&apos;t just build websites - I build solutions designed to
                 perform.
               </p>
               <p className="mt-6 text-[10px] uppercase tracking-[0.3em] text-ink/50">My approach</p>

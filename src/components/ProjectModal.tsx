@@ -187,7 +187,7 @@ const ProjectModal = ({ project, onClose }: Props) => {
                     ( Like what you see? )
                   </div>
                   <h3 className="font-display text-3xl md:text-5xl font-black tracking-tighter leading-[0.95]">
-                    Let's build the <span className="italic font-light">next</span> one
+                    Let&apos;s build the <span className="italic font-light">next</span> one
                     <span className="text-lime">.</span>
                   </h3>
                 </div>

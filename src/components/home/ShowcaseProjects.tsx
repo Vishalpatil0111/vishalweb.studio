@@ -12,7 +12,7 @@ export function ShowcaseProjects() {
           ( Showcase Projects - Live )
         </div>
         <h2 className="col-span-12 md:col-span-9 font-display text-5xl md:text-7xl font-black tracking-tighter leading-none">
-          Things I've <span className="italic font-light">shipped.</span>
+          Things I&apos;ve <span className="italic font-light">shipped.</span>
         </h2>
       </div>
 

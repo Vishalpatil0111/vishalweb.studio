@@ -81,20 +81,21 @@ const Index = () => {
             className="font-display font-black leading-[0.85] tracking-tighter"
             style={{ fontSize: "clamp(3.5rem, 13vw, 13rem)" }}
           >
-            Building
+            Fast,
             <br />
-            <span className="italic font-light">sleek</span>
+            <span className="italic font-light">SEO-ready</span>
             <span className="text-lime">,</span>
             <br />
-            <span className="text-stroke">shipping fast.</span>
+            <span className="text-stroke">built to grow.</span>
           </motion.h1>
         </div>
 
         <div className="grid grid-cols-12 gap-4 items-end">
           <div className="col-span-12 md:col-span-4">
             <p className="text-sm leading-relaxed max-w-xs">
-              Web developer crafting high-performance websites and applications —
-              clean code, intuitive design, real digital products that work.
+              I build fast, SEO-optimized websites that help businesses grow
+              online — from idea to launch, designed to attract users, rank
+              better, and convert visitors into customers.
             </p>
           </div>
           <div className="hidden md:block md:col-span-4 md:col-start-6 text-center">

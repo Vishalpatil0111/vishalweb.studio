@@ -2,8 +2,8 @@ import { useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { toast } from "sonner";
 
-const budgets = ["< 5k", "5–15k", "15–40k", "40k+"];
-const services = ["Brand", "Web", "Art Direction", "Other"];
+const budgets = ["< 1k", "1–3k", "3–8k", "8k+"];
+const services = ["Website", "SEO", "Web App", "Other"];
 
 const ContactForm = () => {
   const [budget, setBudget] = useState(budgets[1]);
@@ -26,9 +26,9 @@ const ContactForm = () => {
     setSubmitting(true);
     // Open a prefilled email — no backend required
     const subject = `New project — ${service} (${budget}) · from ${name}`;
-    const body = `Hi Mara,\n\n${message}\n\n— ${name}\nBudget: ${budget}\nScope: ${service}\nReply to: ${email}`;
+    const body = `Hi Vishal,\n\n${message}\n\n— ${name}\nBudget: ${budget}\nScope: ${service}\nReply to: ${email}`;
     window.location.href =
-      `mailto:hello@maravale.studio?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      `mailto:hello@vishalpatil.dev?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
     setTimeout(() => {
       toast.success("Email draft opened. Talk soon.");
@@ -120,7 +120,7 @@ const ContactForm = () => {
 
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pt-2">
         <p className="text-[10px] uppercase tracking-[0.3em] text-paper/40">
-          Replies within 48h · Lisbon hours
+          Replies within 24h · IST
         </p>
         <button
           type="submit"

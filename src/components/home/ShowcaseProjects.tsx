@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
 import { showcaseProjects } from "./home-data";
 
 export function ShowcaseProjects() {
@@ -40,7 +39,7 @@ export function ShowcaseProjects() {
                     {project.n}
                   </span>
                 </div>
-                <div className="absolute top-4 left-4 right-4 flex items-start justify-between">
+                <div className="absolute top-4 left-4 right-4 flex items-start justify-between gap-3">
                   <span
                     className={`text-[10px] uppercase tracking-[0.25em] ${
                       project.color === "bg-ink" ? "text-paper/70" : "text-ink/70"
@@ -48,8 +47,19 @@ export function ShowcaseProjects() {
                   >
                     {project.tag}
                   </span>
-                  <span className="inline-flex items-center gap-2 bg-paper text-ink px-3 py-2 text-[10px] uppercase tracking-[0.2em] opacity-0 group-hover:opacity-100 transition-opacity">
-                    Visit live <ArrowUpRight size={12} />
+                  <span
+                    className={`inline-flex items-center gap-2 px-3 py-2 text-[10px] uppercase tracking-[0.2em] border ${
+                      project.status === "live"
+                        ? "bg-lime text-ink border-lime"
+                        : "bg-paper text-ink border-ink"
+                    }`}
+                  >
+                    <span
+                      className={`w-1.5 h-1.5 rounded-full ${
+                        project.status === "live" ? "bg-ink" : "bg-ink animate-pulse"
+                      }`}
+                    />
+                    {project.status === "live" ? "Live" : "In progress"}
                   </span>
                 </div>
                 <div className="absolute bottom-4 left-4 right-4 flex flex-wrap gap-2">

@@ -11,7 +11,21 @@ export const services = [
   },
 ];
 
-export const showcaseProjects = [
+export type ProjectStatus = "live" | "in-progress";
+
+export type ShowcaseProject = {
+  n: string;
+  title: string;
+  tag: string;
+  year: string;
+  stack: string[];
+  desc: string;
+  color: string;
+  link: string;
+  status: ProjectStatus;
+};
+
+export const showcaseProjects: ShowcaseProject[] = [
   {
     n: "01",
     title: "Kairo Analytics",
@@ -21,6 +35,7 @@ export const showcaseProjects = [
     desc: "Real-time analytics dashboard with custom charting, role-based auth and a marketing site that converts.",
     color: "bg-lime",
     link: "#",
+    status: "live",
   },
   {
     n: "02",
@@ -31,6 +46,7 @@ export const showcaseProjects = [
     desc: "Headless Shopify storefront for a D2C fashion label - long product stories, fast checkout, ranks page-one for brand terms.",
     color: "bg-ink",
     link: "#",
+    status: "live",
   },
   {
     n: "03",
@@ -41,6 +57,7 @@ export const showcaseProjects = [
     desc: "Editorial agency website with case-study CMS, scroll-triggered motion and 100/100 Lighthouse across all pages.",
     color: "bg-paper border border-ink",
     link: "#",
+    status: "in-progress",
   },
   {
     n: "04",
@@ -51,6 +68,7 @@ export const showcaseProjects = [
     desc: "Workout-tracking PWA with offline mode, custom plan builder and social leaderboard for a gym chain in Pune.",
     color: "bg-ink",
     link: "#",
+    status: "in-progress",
   },
 ];
 

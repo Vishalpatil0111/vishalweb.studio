@@ -1,7 +1,7 @@
 export interface GalleryFrame {
   label: string;
-  bg: string; // tailwind bg class
-  dark?: boolean; // text on dark bg
+  bg: string;
+  dark?: boolean;
   bigText?: string;
   position?: string;
 }
@@ -11,7 +11,7 @@ export interface Project {
   title: string;
   category: string;
   year: string;
-  color: string; // card hero bg
+  color: string;
   client: string;
   roles: string[];
   deliverables: string[];
@@ -24,88 +24,129 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "01",
-    title: "Lunar Commerce",
-    category: "Brand × Web",
+    title: "Lumen Studio",
+    category: "Agency Template",
     year: "2025",
     color: "bg-lime",
-    client: "Lunar Co. — Aerospace Retail",
-    roles: ["Lead Designer", "Art Director", "Type Wrangler"],
-    deliverables: ["Identity", "E-commerce", "Motion", "Packaging"],
+    client: "Creative Studios & Agencies",
+    roles: ["Next.js", "Tailwind", "Framer Motion"],
+    deliverables: ["6 Pages", "CMS Ready", "SEO Optimised", "Dark Mode"],
     summary:
-      "A retail house for the post-Earth shopper — built around weight, gravity and the strange comfort of a quiet checkout.",
+      "An editorial template for boutique studios — bold type, slow scroll, fast Lighthouse scores.",
     body:
-      "Lunar arrived with a deck full of references and one constraint: no purple, no chrome, no rocket emoji. We built an editorial identity around a single custom display cut, paired with a monospaced order language. The site reads like a catalogue: long pages, oversized type, deliberate pauses. Conversion lifted 38% in the first quarter without a single discount banner.",
+      "Lumen ships as a production-ready Next.js project. Clean component structure, semantic HTML, and a typographic system tuned for long-form case studies. Drop in your content, deploy to Vercel, and you're live in under an hour.",
     link: "https://example.com",
     gallery: [
-      { label: "Wordmark study", bg: "bg-lime", bigText: "L", position: "top-0 -right-4" },
-      { label: "Editorial spread", bg: "bg-ink", dark: true, bigText: "01" },
-      { label: "Product detail", bg: "bg-paper" },
-      { label: "Packaging system", bg: "bg-ink", dark: true },
-      { label: "Motion frame", bg: "bg-lime" },
+      { label: "Landing hero", bg: "bg-lime", bigText: "L", position: "top-0 -right-4" },
+      { label: "Case study", bg: "bg-ink", dark: true, bigText: "01" },
+      { label: "Services grid", bg: "bg-paper" },
+      { label: "Mobile view", bg: "bg-ink", dark: true },
+      { label: "Contact form", bg: "bg-lime" },
     ],
   },
   {
     id: "02",
-    title: "Atlas Studio",
-    category: "Identity System",
-    year: "2024",
+    title: "Forge SaaS",
+    category: "SaaS Template",
+    year: "2025",
     color: "bg-ink",
-    client: "Atlas — Architecture Practice",
-    roles: ["Identity Designer", "Type Designer", "Print Director"],
-    deliverables: ["Wordmark", "Custom Type", "Stationery", "80-pg Book"],
+    client: "Early-stage SaaS founders",
+    roles: ["React", "TypeScript", "Stripe"],
+    deliverables: ["Landing", "Pricing", "Auth Flows", "Dashboard"],
     summary:
-      "A wordmark that sits like a load-bearing wall — and a brand book that doubles as a coffee-table object.",
+      "Everything a SaaS landing needs — pricing tiers, testimonial slabs, and a dashboard that doesn't look like a template.",
     body:
-      "Atlas designs unfussy buildings in unfussy places. We mirrored that with a wordmark drawn on a strict grid, then loosened the rules just once for an italic that breathes. The 80-page brand book ships as a softcover with a dust jacket — clients keep it on the shelf instead of in a drive.",
+      "Forge covers the full SaaS surface area: marketing site, pricing page, sign-in/sign-up flows, and a clean dashboard shell. Stripe-ready, fully typed, and built with conversion in mind.",
     gallery: [
-      { label: "Logotype grid", bg: "bg-ink", dark: true, bigText: "A" },
-      { label: "Stationery suite", bg: "bg-paper" },
-      { label: "Book cover", bg: "bg-lime" },
-      { label: "Architectural spread", bg: "bg-ink", dark: true },
-      { label: "Signage mockup", bg: "bg-paper", bigText: "02" },
+      { label: "Hero section", bg: "bg-ink", dark: true, bigText: "F" },
+      { label: "Pricing page", bg: "bg-paper" },
+      { label: "Dashboard", bg: "bg-lime" },
+      { label: "Auth screen", bg: "bg-ink", dark: true },
+      { label: "Mobile nav", bg: "bg-paper", bigText: "02" },
     ],
   },
   {
     id: "03",
-    title: "Noir & Co.",
-    category: "E-commerce",
+    title: "Noir Commerce",
+    category: "E-commerce Template",
     year: "2024",
     color: "bg-paper border border-ink",
-    client: "Noir & Co. — Niche Fragrance",
-    roles: ["Art Director", "Web Designer", "Photo Director"],
-    deliverables: ["Shopify Build", "Photography", "Packaging", "Launch Film"],
+    client: "Niche D2C brands",
+    roles: ["Next.js", "Shopify", "Sanity"],
+    deliverables: ["PLP", "PDP", "Cart", "Checkout"],
     summary:
-      "A fragrance house that smells like 3am — and a site that takes its time getting to the buy button.",
+      "A storefront for brands that don't shout — long product stories, tasteful motion, conversion-tuned checkout.",
     body:
-      "Noir wanted Sephora gone from the conversation. We art-directed a photo series shot entirely on tungsten film, then built a Shopify theme around long, scroll-led product stories. The bottle and the box arrived together as a single sealed object — open it once, never the same way twice.",
+      "Noir Commerce pairs a Shopify backend with a custom Next.js front-end. Editorial product pages, a quiet cart drawer, and a checkout that respects the brand. Built for D2C teams who want to look like a magazine, not a marketplace.",
     link: "https://example.com",
     gallery: [
-      { label: "Bottle study", bg: "bg-ink", dark: true, bigText: "N" },
-      { label: "Editorial photo", bg: "bg-paper" },
-      { label: "Product page", bg: "bg-paper" },
-      { label: "Packaging", bg: "bg-lime" },
-      { label: "Launch film still", bg: "bg-ink", dark: true, bigText: "03" },
+      { label: "Product page", bg: "bg-ink", dark: true, bigText: "N" },
+      { label: "Collection grid", bg: "bg-paper" },
+      { label: "Cart drawer", bg: "bg-paper" },
+      { label: "Editorial block", bg: "bg-lime" },
+      { label: "Checkout", bg: "bg-ink", dark: true, bigText: "03" },
     ],
   },
   {
     id: "04",
-    title: "Field Notes",
-    category: "Editorial / UX",
+    title: "Field Portfolio",
+    category: "Portfolio Template",
+    year: "2024",
+    color: "bg-ink",
+    client: "Designers, devs & freelancers",
+    roles: ["Vite", "React", "MDX"],
+    deliverables: ["Landing", "Work Grid", "Case Study", "About"],
+    summary:
+      "A portfolio that gets out of the way — your work first, your words second, your face never.",
+    body:
+      "Field is the template I use as a baseline for every freelance pitch. MDX-driven case studies, an animated work grid, and a contact section that converts. Lighthouse 100s out of the box.",
+    gallery: [
+      { label: "Work grid", bg: "bg-ink", dark: true, bigText: "P" },
+      { label: "Case study", bg: "bg-paper" },
+      { label: "About page", bg: "bg-lime" },
+      { label: "Contact", bg: "bg-paper" },
+      { label: "Mobile menu", bg: "bg-ink", dark: true, bigText: "04" },
+    ],
+  },
+  {
+    id: "05",
+    title: "Beacon Blog",
+    category: "Blog / Publication",
+    year: "2024",
+    color: "bg-lime",
+    client: "Writers & publications",
+    roles: ["Astro", "MDX", "Tailwind"],
+    deliverables: ["Index", "Article", "Author", "RSS"],
+    summary:
+      "A reader-first publication template — serif by default, three densities, archive built to last.",
+    body:
+      "Beacon is built on Astro for speed and MDX for ergonomics. Calm typography, thoughtful archive, and an article view tuned for long sessions.",
+    gallery: [
+      { label: "Article view", bg: "bg-lime", bigText: "B" },
+      { label: "Index page", bg: "bg-paper" },
+      { label: "Author page", bg: "bg-ink", dark: true },
+      { label: "Archive", bg: "bg-paper" },
+      { label: "Mobile read", bg: "bg-ink", dark: true, bigText: "05" },
+    ],
+  },
+  {
+    id: "06",
+    title: "Atlas Landing",
+    category: "Landing Page",
     year: "2023",
     color: "bg-ink",
-    client: "Field Notes Magazine — Quarterly",
-    roles: ["UX Lead", "Designer", "Reading Mode Engineer"],
-    deliverables: ["Digital Edition", "Reading Mode", "Archive", "Contributor Portal"],
+    client: "Product launches",
+    roles: ["React", "Tailwind", "GSAP"],
+    deliverables: ["Hero", "Features", "FAQ", "CTA"],
     summary:
-      "A quarterly that respects your attention — long-form, reader-tunable, and quietly indexed for the next decade.",
+      "A single-page launch template with the kind of hero that makes people stop scrolling.",
     body:
-      "Field Notes' web edition replaces the usual scroll-jack with a calmer reading mode: serif by default, three densities, and a typographic palette that survives at any width. The archive is searchable by colour, mood and contributor — useful for editors, addictive for readers.",
+      "Atlas is built for product launches and waitlists. Bold hero, scroll-triggered feature reveals, FAQ accordion, and a CTA that converts. Drop in your copy and ship today.",
     gallery: [
-      { label: "Cover system", bg: "bg-ink", dark: true, bigText: "F" },
-      { label: "Reading mode", bg: "bg-paper" },
-      { label: "Archive grid", bg: "bg-lime" },
-      { label: "Contributor portal", bg: "bg-paper" },
-      { label: "Type specimen", bg: "bg-ink", dark: true, bigText: "04" },
+      { label: "Hero", bg: "bg-ink", dark: true, bigText: "A" },
+      { label: "Features", bg: "bg-paper" },
+      { label: "FAQ", bg: "bg-lime" },
+      { label: "Footer CTA", bg: "bg-ink", dark: true, bigText: "06" },
     ],
   },
 ];

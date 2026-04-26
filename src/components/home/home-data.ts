@@ -11,7 +11,7 @@ export const services = [
   },
 ];
 
-export type ProjectStatus = "live" | "in-progress";
+export type ProjectStatus = "live" | "in-progress" | "template";
 
 export type ShowcaseProject = {
   n: string;

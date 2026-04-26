@@ -11,7 +11,7 @@ export const services = [
   },
 ];
 
-export type ProjectStatus = "live" | "in-progress" | "template";
+export type ProjectStatus = "completed" | "in-progress" | "template";
 
 export type ShowcaseProject = {
   n: string;
@@ -21,6 +21,7 @@ export type ShowcaseProject = {
   stack: string[];
   desc: string;
   color: string;
+  image: string;
   link: string;
   status: ProjectStatus;
 };
@@ -28,47 +29,63 @@ export type ShowcaseProject = {
 export const showcaseProjects: ShowcaseProject[] = [
   {
     n: "01",
-    title: "Kairo Analytics",
-    tag: "SaaS Dashboard",
-    year: "2025",
-    stack: ["Next.js", "TypeScript", "Supabase"],
-    desc: "Real-time analytics dashboard with custom charting, role-based auth and a marketing site that converts.",
+    title: "23D Studio",
+    tag: "Design Studio",
+    year: "2026",
+    stack: ["Next.js", "Tailwind", "Motion"],
+    desc: "A visual studio website with immersive home sections, service storytelling and a polished brand-first interface.",
     color: "bg-lime",
-    link: "#",
-    status: "live",
+    image: "/projects/23d-studio.webp",
+    link: "https://www.23dstudio.com/",
+    status: "completed",
   },
   {
     n: "02",
-    title: "Saanvi Boutique",
-    tag: "E-commerce",
-    year: "2024",
-    stack: ["React", "Shopify", "Tailwind"],
-    desc: "Headless Shopify storefront for a D2C fashion label - long product stories, fast checkout, ranks page-one for brand terms.",
+    title: "The Collective Co",
+    tag: "Hospitality",
+    year: "2026",
+    stack: ["Next.js", "Responsive UI", "Brand Site"],
+    desc: "A refined hospitality website built around atmosphere, clear navigation and a calm booking-ready presentation.",
     color: "bg-ink",
-    link: "#",
-    status: "live",
+    image: "/projects/the-collective-co.jpg",
+    link: "https://thecollectiveco.in/",
+    status: "completed",
   },
   {
     n: "03",
-    title: "Northwind Studio",
-    tag: "Agency Site",
-    year: "2024",
-    stack: ["Astro", "Sanity", "GSAP"],
-    desc: "Editorial agency website with case-study CMS, scroll-triggered motion and 100/100 Lighthouse across all pages.",
+    title: "Pure Atelier Design",
+    tag: "Interior Design",
+    year: "2026",
+    stack: ["Vercel", "React", "Tailwind"],
+    desc: "An elegant interiors website in progress, focused on premium visual presentation and project discovery.",
     color: "bg-paper border border-ink",
-    link: "#",
+    image: "/projects/pure-atelier-design.png",
+    link: "https://pure-atelier-design.vercel.app/",
     status: "in-progress",
   },
   {
     n: "04",
-    title: "Pulse Fitness",
-    tag: "Web App",
-    year: "2023",
-    stack: ["React", "Node", "MongoDB"],
-    desc: "Workout-tracking PWA with offline mode, custom plan builder and social leaderboard for a gym chain in Pune.",
+    title: "Altraah Tech",
+    tag: "Tech Company",
+    year: "2026",
+    stack: ["Vercel", "Responsive UI", "SEO"],
+    desc: "A technology company website in progress with service sections, trust signals and a direct conversion path.",
     color: "bg-ink",
-    link: "#",
+    image: "/projects/altraah-tech.avif",
+    link: "https://altraah-tech.vercel.app/",
     status: "in-progress",
+  },
+  {
+    n: "05",
+    title: "E-commerce Template",
+    tag: "Storefront",
+    year: "2026",
+    stack: ["Next.js", "E-commerce", "Template"],
+    desc: "A ready-to-customize storefront template with product-led sections and a modern electronics shopping feel.",
+    color: "bg-lime",
+    image: "/projects/e-commerce-template.png",
+    link: "https://e-commerce-nine-roan-85.vercel.app/",
+    status: "template",
   },
 ];
 

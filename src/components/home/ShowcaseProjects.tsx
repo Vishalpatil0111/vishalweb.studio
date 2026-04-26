@@ -116,26 +116,25 @@ export function ShowcaseProjects() {
                 whileHover={{ scale: 1.08 }}
                 transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               >
-                <span
-                  className={`font-display text-[8rem] font-black tracking-tighter ${
-                    project.color === "bg-ink" ? "text-paper/10" : "text-ink/10"
-                  }`}
-                >
-                  {project.n}
-                </span>
+                <img
+                  src={project.image}
+                  alt={`${project.title} homepage preview`}
+                  className="h-full w-full object-cover"
+                  loading="lazy"
+                />
               </motion.div>
+
+              <div className="absolute inset-0 bg-gradient-to-b from-ink/45 via-ink/5 to-ink/55" />
 
               <div className="absolute top-4 left-4 right-4 flex items-start justify-between gap-3">
                 <span
-                  className={`text-[10px] uppercase tracking-[0.25em] ${
-                    project.color === "bg-ink" ? "text-paper/70" : "text-ink/70"
-                  }`}
+                  className="bg-paper/90 px-3 py-2 text-[10px] uppercase tracking-[0.25em] text-ink"
                 >
                   {project.tag}
                 </span>
                 <span
                   className={`inline-flex items-center gap-2 px-3 py-2 text-[10px] uppercase tracking-[0.2em] border ${
-                    project.status === "live"
+                    project.status === "completed"
                       ? "bg-lime text-ink border-lime"
                       : project.status === "template"
                       ? "bg-ink text-paper border-ink"
@@ -144,15 +143,15 @@ export function ShowcaseProjects() {
                 >
                   <span
                     className={`w-1.5 h-1.5 rounded-full ${
-                      project.status === "live"
+                      project.status === "completed"
                         ? "bg-ink"
                         : project.status === "template"
                         ? "bg-lime"
                         : "bg-ink animate-pulse"
                     }`}
                   />
-                  {project.status === "live"
-                    ? "Live"
+                  {project.status === "completed"
+                    ? "Completed"
                     : project.status === "template"
                     ? "Template"
                     : "In progress"}
@@ -163,9 +162,7 @@ export function ShowcaseProjects() {
                 {project.stack.map((item) => (
                   <span
                     key={item}
-                    className={`text-[10px] uppercase tracking-[0.2em] px-2 py-1 ${
-                      project.color === "bg-ink" ? "bg-paper/10 text-paper" : "bg-ink/10 text-ink"
-                    }`}
+                    className="bg-paper/90 px-2 py-1 text-[10px] uppercase tracking-[0.2em] text-ink"
                   >
                     {item}
                   </span>
@@ -173,9 +170,9 @@ export function ShowcaseProjects() {
               </div>
 
               <AnimatePresence>
-                {project.status === "live" && (
+                {project.status === "completed" && (
                   <motion.span
-                    key="visit-live"
+                    key="visit-completed"
                     initial={{ opacity: 0, y: 8 }}
                     whileHover={{ opacity: 1, y: 0 }}
                     animate={{ opacity: 0, y: 8 }}

@@ -81,20 +81,21 @@ const Index = () => {
             className="font-display font-black leading-[0.85] tracking-tighter"
             style={{ fontSize: "clamp(3.5rem, 13vw, 13rem)" }}
           >
-            Building
+            Fast,
             <br />
-            <span className="italic font-light">sleek</span>
+            <span className="italic font-light">SEO-ready</span>
             <span className="text-lime">,</span>
             <br />
-            <span className="text-stroke">shipping fast.</span>
+            <span className="text-stroke">built to grow.</span>
           </motion.h1>
         </div>
 
         <div className="grid grid-cols-12 gap-4 items-end">
           <div className="col-span-12 md:col-span-4">
             <p className="text-sm leading-relaxed max-w-xs">
-              Web developer crafting high-performance websites and applications —
-              clean code, intuitive design, real digital products that work.
+              I build fast, SEO-optimized websites that help businesses grow
+              online — from idea to launch, designed to attract users, rank
+              better, and convert visitors into customers.
             </p>
           </div>
           <div className="hidden md:block md:col-span-4 md:col-start-6 text-center">
@@ -371,16 +372,45 @@ const Index = () => {
           <div className="col-span-12 md:col-span-3 text-[10px] uppercase tracking-[0.3em] text-ink/60">
             ( About )
           </div>
-          <div className="col-span-12 md:col-span-9">
+          <div className="col-span-12 md:col-span-9 space-y-10">
             <p className="font-display text-3xl md:text-5xl font-light leading-[1.15] tracking-tight">
-              Hello, my name is <span className="font-black">Vishal Patil</span>.
-              I'm a web developer with <span className="font-black">2 years</span> of
-              experience, dedicated to creating <span className="italic">sleek,
-              high-performance websites and applications.</span>
-              <span className="text-ink/40"> I combine clean code with intuitive
-              design to deliver seamless user experiences — transforming concepts
-              into real, polished digital products that truly work.</span>
+              Hi, I'm <span className="font-black">Vishal Patil</span> — a web
+              developer focused on building <span className="italic">modern,
+              scalable, and performance-driven</span> websites.
+              <span className="text-ink/40"> I specialize in website development
+              and SEO optimization, helping businesses establish a strong
+              online presence.</span>
             </p>
+
+            <div className="grid grid-cols-12 gap-6 md:gap-10 pt-4 border-t border-ink">
+              <div className="col-span-12 md:col-span-5">
+                <p className="text-sm leading-relaxed text-ink/70 max-w-md">
+                  Over the past few years, I've worked on multiple projects
+                  where I've transformed ideas into fully functional,
+                  user-friendly digital products. I don't just build websites —
+                  I build solutions designed to perform.
+                </p>
+                <p className="mt-6 text-[10px] uppercase tracking-[0.3em] text-ink/50">
+                  My approach
+                </p>
+              </div>
+
+              <ul className="col-span-12 md:col-span-7 divide-y divide-ink/20 border-y border-ink/20">
+                {[
+                  ["01", "Clean & maintainable code", "Readable, typed, and built to last beyond the launch."],
+                  ["02", "Fast-loading, responsive design", "Optimised for Core Web Vitals on every device."],
+                  ["03", "SEO-friendly structure from day one", "Semantic markup, schema, and content that ranks."],
+                ].map(([n, t, d]) => (
+                  <li key={n} className="py-5 grid grid-cols-12 gap-4 items-baseline">
+                    <span className="col-span-2 md:col-span-1 text-xs tracking-[0.3em] text-ink/50">{n}</span>
+                    <div className="col-span-10 md:col-span-11">
+                      <h3 className="font-display text-xl md:text-2xl font-black tracking-tight">{t}</h3>
+                      <p className="text-sm text-ink/60 mt-1">{d}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>

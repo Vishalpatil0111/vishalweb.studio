@@ -1,3 +1,5 @@
+"use client";
+
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ArrowUpRight } from "lucide-react";
 import { useEffect } from "react";

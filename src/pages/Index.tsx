@@ -48,6 +48,7 @@ const Index = () => {
           V.Patil<span className="text-lime">.</span>
         </a>
         <div className="hidden md:flex gap-8 text-xs uppercase tracking-[0.2em]">
+          <a href="#projects" className="hover:text-lime transition-colors">Projects</a>
           <a href="#work" className="hover:text-lime transition-colors">Templates</a>
           <a href="#services" className="hover:text-lime transition-colors">Services</a>
           <a href="#about" className="hover:text-lime transition-colors">About</a>
